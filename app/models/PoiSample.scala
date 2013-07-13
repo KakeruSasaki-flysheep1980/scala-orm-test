@@ -1,12 +1,23 @@
 package models
 
-/**
- * Created with IntelliJ IDEA.
- * User: flysheep1980
- * Date: 13/07/13
- * Time: 22:20
- * To change this template use File | Settings | File Templates.
- */
-class PoiSample {
+object PoiSample {
 
+  import info.folone.scala.poi._
+  import scalaz._
+  import syntax.monoid._
+  import syntax.equal._
+  import syntax.foldable._
+  import std.list._
+
+  def read = {
+//    val file = new java.io.File("")
+    val path = "sample.xls"
+    Workbook(path).map {
+      case \/-(workbook) => {
+        workbook.sheets
+      }
+      case -\/(t) => throw t
+    }.unsafePerformIO()
+
+  }
 }

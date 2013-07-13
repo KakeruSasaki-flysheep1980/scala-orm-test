@@ -15,7 +15,8 @@ object ApplicationBuild extends Build {
     "org.sorm-framework" % "sorm" % "0.3.8",
     "net.fwbrasil" %% "activate-play" % "1.3",
     "net.fwbrasil" %% "activate-jdbc" % "1.3",
-    "com.googlecode.mapperdao" % "mapperdao" % "1.0.0.rc22-2.10.1"
+    "com.googlecode.mapperdao" % "mapperdao" % "1.0.0.rc22-2.10.1",
+    "info.folone" %% "poi-scala" % "0.9"
   )
 
 
